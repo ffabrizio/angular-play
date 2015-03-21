@@ -1,8 +1,8 @@
 "use strict";
 
-angular.module("animals", [
-  "Dog",
-  "Cat"
+angular.module("Animals", [
+  "DogModule",
+  "CatModule"
 ])
 .factory("StyleFactory", function ($http) {
     var factory = {};
@@ -13,7 +13,7 @@ angular.module("animals", [
                 if (document.getElementById(cssId) === null) {
                     angular.element(document.querySelector('head'))
                         .append("<link id=\"" + cssId + "\" href=\"" + url + "\" rel=\"stylesheet\">");
-                };
+                }
             });
     };
     return factory;

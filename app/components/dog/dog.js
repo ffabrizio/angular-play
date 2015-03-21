@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("Dog", [])
+angular.module("DogModule", [])
 
 .directive("dog", [function(){
     return {
@@ -8,10 +8,10 @@ angular.module("Dog", [])
         replace: true,
         restrict: "E",
         templateUrl: "components/dog/dog.html",
-        controller: "CatCtrl"
+        controller: "DogCtrl"
     };
 }])
 
-.controller("CatCtrl", [function() {
+.controller("DogCtrl", [function() {
 
 }]);

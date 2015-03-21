@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("Cat", [])
+angular.module("CatModule", [])
 
 .directive("cat", ["StyleFactory", function(StyleFactory){
     return {
