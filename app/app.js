@@ -1,10 +1,10 @@
 "use strict";
 
 angular.module("animals", [
-  "animals.dog",
-  "animals.cat"
+  "Dog",
+  "Cat"
 ])
-.factory("styleFactory", function ($http) {
+.factory("StyleFactory", function ($http) {
     var factory = {};
     factory["get"] = function (name, url) {
         var cssId = "css-" + name;
@@ -18,7 +18,7 @@ angular.module("animals", [
     };
     return factory;
 })
-.factory("modelFactory", function ($http) {
+.factory("ModelFactory", function ($http) {
     var factory = {};
     factory["get"] = function (url) {
         return $http.get(url, { cache: true });

@@ -1,8 +1,8 @@
 "use strict";
 
-angular.module("animals.cat", [])
+angular.module("Cat", [])
 
-.directive("cat", ["styleFactory", function(styleFactory){
+.directive("cat", ["StyleFactory", function(StyleFactory){
     return {
         scope: { id: "@" },
         replace: true,
@@ -11,7 +11,7 @@ angular.module("animals.cat", [])
         compile:  function () {
             return {
                 pre: function () {
-                    styleFactory.get("cat", "components/cat/cat.css");
+                    StyleFactory.get("cat", "components/cat/cat.css");
                 }
             }
         },
@@ -19,8 +19,8 @@ angular.module("animals.cat", [])
     }
 }])
 
-.controller("CatCtrl", ["$scope", "modelFactory", function($scope, modelFactory) {
-    modelFactory.get("components/cat/cat.json")
+.controller("CatCtrl", ["$scope", "ModelFactory", function($scope, ModelFactory) {
+    ModelFactory.get("components/cat/cat.json")
         .success(function(data){
             $scope.model = data;
             console.log($scope.id, $scope.model)

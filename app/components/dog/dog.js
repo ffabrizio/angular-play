@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("animals.dog", [])
+angular.module("Dog", [])
 
 .directive("dog", [function(){
     return {

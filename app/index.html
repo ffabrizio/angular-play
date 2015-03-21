@@ -17,9 +17,18 @@
     <cat id="3"></cat>
     <dog id="4"></dog>
 
+
+
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="components/dog/dog.js"></script>
     <script src="components/cat/cat.js"></script>
+
+    <script>
+        angular.module("Version", ["VersionFactory"])
+                .controller("VersionController", ["$scope","VersionFactory", function($scope, VersionFactory){
+                    console.log(VersionFactory.get())
+                }])
+    </script>
 </body>
 </html>
